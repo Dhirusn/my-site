@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  isScrolledDown: boolean = false;
 
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event:Event) {
+    const scrollingPosition = document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (scrollingPosition > 0) {
+      this.isScrolledDown = true;
+    } else {
+      this.isScrolledDown = false;
+    }
+  }
 }

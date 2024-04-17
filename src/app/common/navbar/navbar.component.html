@@ -1,8 +1,8 @@
 <!--/ Nav Star /-->
-<div gdGap.xl="2px">
-  <header class="header-container ">
+<div gdGap.xl="2px" class="mb-6">
+  <header id="scrollingDiv" class="header-container" [class.scrolledDown]="isScrolledDown" (scroll)="onScroll($event)">
     <nav class="menu menu-vertical lg:menu-horizontal ">
-      <div class="navbar bg-transparent flex space-around">
+      <div class="navbar bg-transparent flex justify-between">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -11,20 +11,11 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
               </svg>
             </div>
-            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52">
-              <li class="fadedown-enter-done list-item" style="transition-delay: 0ms;"><a href="/#about">About</a></li>
-              <li class="fadedown-enter-done list-item" style="transition-delay: 100ms;"><a href="/#jobs">Experience</a>
-              </li>
-              <li class="fadedown-enter-done list-item" style="transition-delay: 200ms;"><a href="/#projects">Work</a>
-              </li>
-              <li class="fadedown-enter-done list-item" style="transition-delay: 300ms;"><a href="/#contact">Contact1</a>
-              </li>
-            </ul>
           </div>
           <a class="btn btn-ghost text-xl">logo</a>
         </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
+        <div class="navbar-center hidden lg:flex justify-between">
+          <ul class="nav-menu menu menu-horizontal px-1">
             <li class="fadedown-enter-done list-item" style="transition-delay: 0ms;"><a href="/#about">About</a></li>
             <li class="fadedown-enter-done list-item" style="transition-delay: 100ms;"><a href="/#jobs">Experience</a>
             </li>
@@ -33,6 +24,8 @@
             <li class="fadedown-enter-done list-item" style="transition-delay: 300ms;"><a href="/#contact">Contact</a>
             </li>
           </ul>
+          <div class="fadedown-enter-done" style="transition-delay: 400ms;"><button class="resume-button" href="/resume.pdf"
+              target="_blank" rel="noopener noreferrer">Resume</button></div>
         </div>
         <!-- <div class="logo">
           <a href="">logo</a>
