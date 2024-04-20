@@ -39,4 +39,4 @@ jobs:
         with:
           project: "dhiru"
           entrypoint: "https://deno.land/std@0.217.0/http/file_server.ts"
-          root: "dist/	my-website"
+          root: "dist/my-website"
