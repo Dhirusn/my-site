@@ -38,5 +38,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "dhiru"
-          entrypoint: "index.html"
+          entrypoint: "dist"
           root: ""
