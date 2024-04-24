@@ -32,11 +32,11 @@ jobs:
         run: "npm install"
 
       - name: Build step
-        run: "npm run build:ssr"
+        run: "ng run my-website:build:production"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "dhiru"
           entrypoint: "https://deno.land/std@0.217.0/http/file_server.ts"
-          root: "dist/my-website"
+          root: "dist/browser/index.html"
