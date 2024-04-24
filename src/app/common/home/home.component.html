@@ -1,26 +1,27 @@
 <div class="container mx-auto home-container ">
-    <section class="hero-section mb-8">
+    <section  class="hero-section mb-8">
         <div class="text-neutral-content flex justify-center flex-col items-start text-left">
-            <div class="my-detail" style="transition-delay: 100ms;">
+            <div  [@fadeInRightOnEnter]  class="my-detail" style="transition-delay: 100ms;">
                 <h1>Hi, my name is</h1>
             </div>
-            <div class="my-detail" style="transition-delay: 200ms;">
+            <div [@fadeInLeftOnEnter] class="my-detail" style="transition-delay: 200ms;">
                 <h2 class="big-heading">Dhirendra Singh Negi.</h2>
             </div>
-            <div class="my-detail" style="transition-delay: 300ms;">
+            <div  [@fadeInRightOnEnter]  class="my-detail" style="transition-delay: 300ms;">
                 <h3 class="big-heading">I build things for the web.</h3>
             </div>
-            <div class="my-detail" style="transition-delay: 400ms;">
+            <div [@fadeInLeftOnEnter] class="my-detail" style="transition-delay: 400ms;">
                 <p>I’m a software engineer specializing in building (and occasionally designing) exceptional digital
                     experiences. Currently, I’m focused on building accessible, human-centered products at <a
                         class="animate-bounce" href="" target="_blank" rel="noreferrer"> De facto Infotech</a>.</p>
             </div>
-            <div class="my-detail" style="transition-delay: 500ms;margin-top: 3rem;"><button class="email-link "
+            <div  [@fadeInRightOnEnter]  class="my-detail" style="transition-delay: 500ms;margin-top: 3rem;"><button class="email-link "
                     target="_blank" rel="noreferrer">Check out my course!</button></div>
         </div>
     </section>
     <!-- about me section  -->
-    <section id="aboutme"  style="margin-bottom: 12dvh; margin-top: 12dvh" class="about-section" data-sr-id="0"
+    <section id="aboutme" [@scrollanimation]="isVisible ? 'show' : 'void'" (mouseenter)="isVisible = true" style="margin-bottom: 12dvh; margin-top: 12dvh" class="about-section"
+        data-sr-id="0"
         style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;">
         <h2 class="numbered-heading">About Me</h2>
         <div class="inner">
@@ -28,8 +29,8 @@
                 <div>
                     <p>Hello! My name is Dhirendra and I enjoy creating things that live on the internet. My interest in
                         web development started back in 2021 learn about HTML &amp; CSS!</p>
-                    <p>I also recently <a href=""
-                            rel="noopener noreferrer" target="_blank">launched a course</a> that covers everything you
+                    <p>I also recently <a href="" rel="noopener noreferrer" target="_blank">launched a course</a> that
+                        covers everything you
                         need to build a web app with the Spotify API using Node &amp; React.</p>
                     <p>Here are a few technologies I’ve been working with recently:</p>
                 </div>
@@ -105,14 +106,15 @@
         </div>
     </section>
     <!-- projects -->
-    <section id="projects"  style="margin-bottom: 12dvh; margin-top: 12dvh" class="projects-section" style="margin-bottom: 50px;">
+    <section id="projects" style="margin-bottom: 12dvh; margin-top: 12dvh" class="projects-section"
+        style="margin-bottom: 50px;">
         <h2 data-sr-id="64"
             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;">
             Noteworthy Projects</h2><a class="inline-link archive-link" href="/archive" data-sr-id="65"
             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;">view
             the archive</a>
         <ul class="projects-grid">
-            <li class="project-item"
+            <li [@projectAnimation]="{ value: '', params: { initialTransform: 1 % 2 === 0 ? 'translateX(-100%)' : 'translateX(100%)' } }" class="project-item"
                 style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
                 data-sr-id="66">
                 <div class="project-inner">
@@ -122,12 +124,10 @@
                                 <i class="fa-regular fa-folder "></i>
                             </div>
                             <div class="project-links">
-                                <a href="" aria-label="GitHub Link"
-                                    target="_blank" rel="noopener noreferrer">
+                                <a href="" aria-label="GitHub Link" target="_blank" rel="noopener noreferrer">
                                     <i class="fa-brands fa-github"></i></a>
-                                <a href="" aria-label="External Link" class="external"
-                                    target="_blank" rel="noopener noreferrer"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <a href="" aria-label="External Link" class="external" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                             </div>
                         </div>
@@ -148,7 +148,7 @@
                     </footer>
                 </div>
             </li>
-            <li class="project-item"
+            <li [@fadeInLeftOnEnter] class="project-item"
                 style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
                 data-sr-id="67">
                 <div class="project-inner">
@@ -158,8 +158,7 @@
                                 <i class="fa-regular fa-folder"></i>
                             </div>
                             <div class="project-links">
-                                <a href="" aria-label="GitHub Link"
-                                    target="_blank" rel="noopener noreferrer">
+                                <a href="" aria-label="GitHub Link" target="_blank" rel="noopener noreferrer">
                                     <i class="fa-brands fa-github"></i></a>
                                 <a href="https://octoprofile.now.sh" aria-label="External Link" class="external"
                                     target="_blank" rel="noopener noreferrer"><i
@@ -167,8 +166,8 @@
                                 </a>
                             </div>
                         </div>
-                        <h3 class="project-title"><a href="" target="_blank"
-                                rel="noopener noreferrer">Time to Have More Fun</a></h3>
+                        <h3 class="project-title"><a href="" target="_blank" rel="noopener noreferrer">Time to Have More
+                                Fun</a></h3>
                         <div class="project-description">
                             <p>A single page web app for helping me choose where to travel, built with Next.js,
                                 Firebase, and Tailwind CSS</p>
@@ -183,7 +182,7 @@
                     </footer>
                 </div>
             </li>
-            <li class="project-item"
+            <li [@fadeInLeftOnEnter] class="project-item"
                 style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
                 data-sr-id="68">
                 <div class="project-inner">
@@ -193,19 +192,16 @@
                                 <i class="fa-regular fa-folder"></i>
                             </div>
                             <div class="project-links">
-                                <a href="" aria-label="GitHub Link"
-                                    target="_blank" rel="noopener noreferrer">
+                                <a href="" aria-label="GitHub Link" target="_blank" rel="noopener noreferrer">
                                     <i class="fa-brands fa-github"></i></a>
 
-                                <a href="" aria-label="External Link" class="external"
-                                    target="_blank" rel="noopener noreferrer"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <a href="" aria-label="External Link" class="external" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                             </div>
                         </div>
-                        <h3 class="project-title"><a
-                                href=""
-                                target="_blank" rel="noopener noreferrer">Building a Headless Mobile App CMS From
+                        <h3 class="project-title"><a href="" target="_blank" rel="noopener noreferrer">Building a
+                                Headless Mobile App CMS From
                                 Scratch</a></h3>
                         <div class="project-description">
                             <p>Find out how we built a custom headless CMS with Node, Express, and Firebase for a
@@ -222,7 +218,7 @@
                     </footer>
                 </div>
             </li>
-            <li class="project-item"
+            <li  [@fadeInRightOnEnter] class="project-item"
                 style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
                 data-sr-id="69">
                 <div class="project-inner">
@@ -232,17 +228,15 @@
                                 <i class="fa-regular fa-folder"></i>
                             </div>
                             <div class="project-links">
-                                <a href="" aria-label="GitHub Link"
-                                    target="_blank" rel="noopener noreferrer">
+                                <a href="" aria-label="GitHub Link" target="_blank" rel="noopener noreferrer">
                                     <i class="fa-brands fa-github"></i></a>
-                                <a href="" aria-label="External Link" class="external"
-                                    target="_blank" rel="noopener noreferrer"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <a href="" aria-label="External Link" class="external" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                             </div>
                         </div>
-                        <h3 class="project-title"><a href="" target="_blank"
-                                rel="noopener noreferrer">OctoProfile</a></h3>
+                        <h3 class="project-title"><a href="" target="_blank" rel="noopener noreferrer">OctoProfile</a>
+                        </h3>
                         <div class="project-description">
                             <p>A nicer look at your GitHub profile and repo stats. Includes data visualizations of your
                                 top languages, starred repositories, and sort through your top repos by number of stars,
@@ -258,7 +252,7 @@
                     </footer>
                 </div>
             </li>
-            <li class="project-item"
+            <li  [@fadeInRightOnEnter] class="project-item"
                 style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
                 data-sr-id="71">
                 <div class="project-inner">
@@ -268,17 +262,52 @@
                                 <i class="fa-regular fa-folder"></i>
                             </div>
                             <div class="project-links">
-                                <a href="" aria-label="GitHub Link"
-                                    target="_blank" rel="noopener noreferrer">
+                                <a href="" aria-label="GitHub Link" target="_blank" rel="noopener noreferrer">
                                     <i class="fa-brands fa-github"></i></a>
-                                <a href="" aria-label="External Link" class="external"
-                                    target="_blank" rel="noopener noreferrer"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <a href="" aria-label="External Link" class="external" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i>
                                 </a>
                             </div>
                         </div>
-                        <h3 class="project-title"><a href="" target="_blank"
-                                rel="noopener noreferrer">Apple Music Embeddable Web Player Widget</a></h3>
+                        <h3 class="project-title"><a href="" target="_blank" rel="noopener noreferrer">Apple Music
+                                Embeddable Web Player Widget</a></h3>
+                        <div class="project-description">
+                            <p>Embeddable web player widget for Apple Music that lets users log in and listen to full
+                                song playback in the browser leveraging <a
+                                    href="https://developer.apple.com/documentation/musickitjs" target="_blank"
+                                    rel="noopener noreferrer">MusicKit.js</a>. Read more about this project on <a
+                                    href="https://9to5mac.com/2018/06/03/apple-music-embeddable-web-player-listen-browser/"
+                                    target="_blank" rel="noopener noreferrer">9to5Mac</a>.</p>
+                        </div>
+                    </header>
+                    <footer>
+                        <ul class="project-tech-list">
+                            <li>MusicKit.js</li>
+                            <li>JS</li>
+                            <li>SCSS</li>
+                        </ul>
+                    </footer>
+                </div>
+            </li>
+            <li  [@fadeInRightOnEnter] class="project-item"
+                style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
+                data-sr-id="71">
+                <div class="project-inner">
+                    <header>
+                        <div class="project-top">
+                            <div class="folder">
+                                <i class="fa-regular fa-folder"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="" aria-label="GitHub Link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i></a>
+                                <a href="" aria-label="External Link" class="external" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title"><a href="" target="_blank" rel="noopener noreferrer">Apple Music
+                                Embeddable Web Player Widget</a></h3>
                         <div class="project-description">
                             <p>Embeddable web player widget for Apple Music that lets users log in and listen to full
                                 song playback in the browser leveraging <a
@@ -299,7 +328,7 @@
             </li>
         </ul><button class="more-button">Show More</button>
     </section>
-    <section id="contact"  style="margin-bottom: 12dvh; margin-top: 12dvh" class="contact-section" data-sr-id="15"
+    <section id="contact" style="margin-bottom: 12dvh; margin-top: 12dvh" class="contact-section" data-sr-id="15"
         style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;">
         <h2 class="numbered-heading overlines">What’s Next?</h2>
         <h2 class="title">Get In Touch</h2>
