@@ -39,4 +39,4 @@ jobs:
         with:
           project: "dhiru"
           entrypoint: "dist/my-website/browser"
-          root: ""
+          root: "dist"
