@@ -38,5 +38,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "dhiru"
-          entrypoint: "dist/my-website/browser"
+          entrypoint: "my-website/browser"
           root: "dist"
