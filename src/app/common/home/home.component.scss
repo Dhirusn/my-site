@@ -3,7 +3,8 @@
     counter-reset: section;
 }
 section{
-    margin-bottom: 30px;
+    margin-bottom: 12dvh;
+    margin-top: 12dvh
 }
 @media (max-width: 1080px) {
     .home-container {

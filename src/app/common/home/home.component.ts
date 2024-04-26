@@ -16,20 +16,19 @@ import { fadeInLeftAnimation, fadeInLeftOnEnterAnimation, fadeInOnEnterAnimation
         opacity: 0,
         transform: 'translateX(-100%)'
       }),
-      animate('0.5s ease-in')
+      animate('0.8s ease-in')
     ])]),
-    trigger('projectAnimation', [
-      transition(':enter', [
-        style({
-          opacity: 0,
-          transform: '{{ initialTransform }}'
-        }),
-        animate('0.5s ease-in', style({
-          opacity: 1,
-          transform: 'translateX(0)'
-        }))
-      ], { params: { initialTransform: 'translateX(-100%)' } })
-    ]),
+    trigger("scrollanimation2", [state('show', style({
+      opacity: 1,
+      transform: 'translateX(0)'
+    })),
+    transition('void => show', [
+      style({
+        opacity: 0,
+        transform: 'translateX(200%)'
+      }),
+      animate('0.8s ease-in')
+    ])]),
     fadeInOnEnterAnimation(),
     fadeInLeftOnEnterAnimation(),
     fadeInRightOnEnterAnimation() // higher duration makes the animation start
@@ -38,6 +37,7 @@ import { fadeInLeftAnimation, fadeInLeftOnEnterAnimation, fadeInOnEnterAnimation
 export class HomeComponent {
   isVisible = false;
   isProjectListVisible = false;
+  isContactVisible = false;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -54,8 +54,14 @@ export class HomeComponent {
     if (position2 < windowHeight2) {
       this.isProjectListVisible = true;
     }
+
+    const element3 = document.querySelector('.projects-grid') as HTMLElement;
+    const position3 = element3.getBoundingClientRect().top;
+    const windowHeight3 = window.innerHeight;
+    if (position3 < windowHeight3) {
+      this.isContactVisible = true;
+    }
   }
 
-  projects = [/* Your project data */];
 
 }

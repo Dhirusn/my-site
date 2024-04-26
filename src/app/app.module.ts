@@ -7,13 +7,15 @@ import { HomeComponent } from './common/home/home.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SplashScreenComponent } from './common/splash-screen/splash-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    SplashScreenComponent
   ],
   imports: [
     BrowserAnimationsModule,

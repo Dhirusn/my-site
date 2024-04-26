@@ -1,5 +1,5 @@
 <div class="container mx-auto home-container ">
-    <section  class="hero-section mb-8">
+    <section class="hero-section mb-8 " style="margin: 0;">
         <div class="text-neutral-content flex justify-center flex-col items-start text-left">
             <div  [@fadeInRightOnEnter]  class="my-detail" style="transition-delay: 100ms;">
                 <h1>Hi, my name is</h1>
@@ -49,7 +49,7 @@
             </div>
         </div>
     </section>
-    <section id="experience" style="margin-bottom: 12dvh; margin-top: 12dvh">
+    <section id="experience">
         <h2 class="numbered-heading">Work Experience</h2>
         <div class="inner">
             <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
@@ -106,15 +106,15 @@
         </div>
     </section>
     <!-- projects -->
-    <section id="projects" style="margin-bottom: 12dvh; margin-top: 12dvh" class="projects-section"
-        style="margin-bottom: 50px;">
+    <section id="projects" class="projects-section" style="margin-bottom: 50px;">
         <h2 data-sr-id="64"
             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;">
-            Noteworthy Projects</h2><a class="inline-link archive-link" href="/archive" data-sr-id="65"
+            Noteworthy Projects</h2>
+        <a class="inline-link archive-link" href="/archive" data-sr-id="65"
             style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;">view
             the archive</a>
         <ul class="projects-grid">
-            <li [@projectAnimation]="{ value: '', params: { initialTransform: 1 % 2 === 0 ? 'translateX(-100%)' : 'translateX(100%)' } }" class="project-item"
+            <li [@scrollanimation2]="isProjectListVisible ? 'show' : 'void'" (mouseenter)="isVisible = true" class="project-item"
                 style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
                 data-sr-id="66">
                 <div class="project-inner">
@@ -148,7 +148,7 @@
                     </footer>
                 </div>
             </li>
-            <li [@fadeInLeftOnEnter] class="project-item"
+            <li [@scrollanimation2]="isProjectListVisible ? 'show' : 'void'" (mouseenter)="isVisible = true" class="project-item"
                 style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
                 data-sr-id="67">
                 <div class="project-inner">
@@ -182,7 +182,7 @@
                     </footer>
                 </div>
             </li>
-            <li [@fadeInLeftOnEnter] class="project-item"
+            <li [@scrollanimation]="isProjectListVisible ? 'show' : 'void'" (mouseenter)="isVisible = true" class="project-item"
                 style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
                 data-sr-id="68">
                 <div class="project-inner">
@@ -218,7 +218,7 @@
                     </footer>
                 </div>
             </li>
-            <li  [@fadeInRightOnEnter] class="project-item"
+            <li [@scrollanimation2]="isProjectListVisible ? 'show' : 'void'" (mouseenter)="isVisible = true" class="project-item"
                 style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.3s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
                 data-sr-id="69">
                 <div class="project-inner">
@@ -252,7 +252,7 @@
                     </footer>
                 </div>
             </li>
-            <li  [@fadeInRightOnEnter] class="project-item"
+            <li [@scrollanimation]="isProjectListVisible ? 'show' : 'void'" (mouseenter)="isVisible = true" class="project-item"
                 style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
                 data-sr-id="71">
                 <div class="project-inner">
@@ -289,7 +289,7 @@
                     </footer>
                 </div>
             </li>
-            <li  [@fadeInRightOnEnter] class="project-item"
+            <li [@scrollanimation]="isProjectListVisible ? 'show' : 'void'" (mouseenter)="isVisible = true" class="project-item"
                 style="transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"
                 data-sr-id="71">
                 <div class="project-inner">
@@ -328,7 +328,17 @@
             </li>
         </ul><button class="more-button">Show More</button>
     </section>
-    <section id="contact" style="margin-bottom: 12dvh; margin-top: 12dvh" class="contact-section" data-sr-id="15"
+
+    <section id="certification">
+        <h2 data-sr-id="64"
+            style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;">
+            Certifications</h2>
+        <div class="inner">
+
+        </div>
+    </section>
+
+    <section [@scrollanimation]="isContactVisible ? 'show' : 'void'" (mouseenter)="isVisible = true" id="contact" class="contact-section" data-sr-id="15"
         style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;">
         <h2 class="numbered-heading overlines">What’s Next?</h2>
         <h2 class="title">Get In Touch</h2>
